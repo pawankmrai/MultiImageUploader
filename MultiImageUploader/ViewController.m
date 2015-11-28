@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "ImageUploader/ImageUploader.h"
 
-@interface ViewController ()
-
+@interface ViewController () <ImageUploaderDelegate>
+- (IBAction)startUploadingImages:(id)sender;
 @end
 
 @implementation ViewController
@@ -23,5 +24,25 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)startUploadingImages:(id)sender {
+    
+    NSArray *allImagesArray = @[[UIImage imageNamed:@"image1"],
+                                [UIImage imageNamed:@"image2"],
+                                [UIImage imageNamed:@"image2"],
+                                [UIImage imageNamed:@"image4"],
+                                [UIImage imageNamed:@"image5"],
+                                [UIImage imageNamed:@"image6"],
+                                [UIImage imageNamed:@"image7"],
+                                [UIImage imageNamed:@"image8"],
+                                [UIImage imageNamed:@"image9"],
+                                [UIImage imageNamed:@"image10"],
+                                ];
+    
+    //
+    [[ImageUploader shareImageUploader] uploadToURLWithImages:allImagesArray];
+}
+
+
 
 @end

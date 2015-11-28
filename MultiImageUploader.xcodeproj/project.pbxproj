@@ -13,6 +13,7 @@
 		87095F4B1C01BA6D00D6F0B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87095F491C01BA6D00D6F0B0 /* Main.storyboard */; };
 		87095F4D1C01BA6D00D6F0B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87095F4C1C01BA6D00D6F0B0 /* Assets.xcassets */; };
 		87095F501C01BA6D00D6F0B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87095F4E1C01BA6D00D6F0B0 /* LaunchScreen.storyboard */; };
+		87136FDF1C09A7E50009B8BC /* ImageUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 87136FDE1C09A7E50009B8BC /* ImageUploader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		87095F4C1C01BA6D00D6F0B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87095F4F1C01BA6D00D6F0B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87095F511C01BA6D00D6F0B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87136FDD1C09A7E50009B8BC /* ImageUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUploader.h; sourceTree = "<group>"; };
+		87136FDE1C09A7E50009B8BC /* ImageUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUploader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 				87095F441C01BA6D00D6F0B0 /* AppDelegate.m */,
 				87095F461C01BA6D00D6F0B0 /* ViewController.h */,
 				87095F471C01BA6D00D6F0B0 /* ViewController.m */,
+				87136FDC1C09A6C70009B8BC /* ImageUploader */,
 				87095F491C01BA6D00D6F0B0 /* Main.storyboard */,
 				87095F4C1C01BA6D00D6F0B0 /* Assets.xcassets */,
 				87095F4E1C01BA6D00D6F0B0 /* LaunchScreen.storyboard */,
@@ -77,6 +81,15 @@
 				87095F411C01BA6D00D6F0B0 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		87136FDC1C09A6C70009B8BC /* ImageUploader */ = {
+			isa = PBXGroup;
+			children = (
+				87136FDD1C09A7E50009B8BC /* ImageUploader.h */,
+				87136FDE1C09A7E50009B8BC /* ImageUploader.m */,
+			);
+			path = ImageUploader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +123,11 @@
 				TargetAttributes = {
 					87095F3C1C01BA6D00D6F0B0 = {
 						CreatedOnToolsVersion = 7.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -151,6 +169,7 @@
 			files = (
 				87095F481C01BA6D00D6F0B0 /* ViewController.m in Sources */,
 				87095F451C01BA6D00D6F0B0 /* AppDelegate.m in Sources */,
+				87136FDF1C09A7E50009B8BC /* ImageUploader.m in Sources */,
 				87095F421C01BA6D00D6F0B0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,9 +281,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MultiImageUploader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pawan.MultiImageUploader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -273,9 +294,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MultiImageUploader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pawan.MultiImageUploader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -298,6 +321,7 @@
 				87095F561C01BA6D00D6F0B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
