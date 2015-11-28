@@ -39,7 +39,7 @@
                                 [UIImage imageNamed:@"image10"],
                                 ];
     
-    //
+    //Upload selected images
     [[ImageUploader shareImageUploader] uploadToURLWithImages:allImagesArray];
 }
 
